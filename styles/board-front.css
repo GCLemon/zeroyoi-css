@@ -22,6 +22,6 @@
 #root > div > div > div > div > div > div > div > div > div:nth-of-type(9) {
   display: block;
 }
-#root > div > div > div > div > div > div > div > div > div:nth-of-type(14) {
+#root > div > div > div > div > div > div > div > div > div:nth-of-type(14+n) {
   display: block;
 }
