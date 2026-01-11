@@ -18,18 +18,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Kings&family=Yuji+Mai&family=Yusei+Magic&display=swap');
 
 :root {
-    --balloon-width: 1080px;
+    --balloon-width: 960px;
     --balloon-height: 270px;
-    --image-size: 240px;
-    --padding-vert: 8px;
-    --padding-horiz: 8px;
+    --image-size: 225px;
+    --padding-vert: 32px;
+    --padding-horiz: 16px;
     --background-image: linear-gradient(120deg, #001896, #0E172A);
     --border-color: rgb(245, 245, 245);
     --font-color: rgb(245, 245, 245);
     --font-color-success: rgb(33, 150, 243);
     --font-color-failure: rgb(245, 0, 87);
-    --font-size-text: 2.5rem;
-    --font-size-name: 2.0rem;
+    --font-size-text: 2.0rem;
+    --font-size-name: 1.6rem;
 }
 
 // 吹き出し
@@ -45,6 +45,7 @@ div[tabindex="0"] > .MuiPaper-root {
     margin: 0px;
     border: 4px solid var(--border-color);
     background-image: var(--background-image);
+    overflow: visible;
 
     // Paperの内側の設定
     > .MuiPaper-root {
@@ -55,14 +56,20 @@ div[tabindex="0"] > .MuiPaper-root {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+
+        > div:nth-of-type(3) {
+            width: 100%;
+            height: calc(100% - 50px);
+            padding: 0;
+        }
     }
 
     // アイコン画像
     > img {
         display: block;
         position: absolute;
-        top: calc((var(--balloon-height) - var(--image-size)) / 2);
-        left: calc(var(--balloon-width) - var(--padding-horiz) - var(--image-size) - 70px);
+        top: calc((var(--balloon-height) - var(--image-size)) / 2 - 15px);
+        left: calc(var(--balloon-width) - var(--image-size));
         width: var(--image-size);
         height: var(--image-size);
         object-fit: contain;
@@ -96,8 +103,8 @@ div[tabindex="0"] > .MuiPaper-root {
     > .MuiPaper-root > div:nth-child(1) {
         --dice-size: 120px;
         position: absolute;
-        left: var(--padding-horiz);
-        bottom: var(--padding-vert);
+        left: 32px;
+        bottom: 8px;
         justify-content: flex-start;
         margin: 0;
 
