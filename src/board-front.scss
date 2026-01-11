@@ -16,8 +16,15 @@
 @import url("https://yudukiak.github.io/ccfoliaCSS/CSS/asset/volume.css");
 
 #root > div > div > div > div > div > div > div > div {
-     > div { display: none; }
-     > div:nth-of-type(1) { display: block; }
-     > div:nth-of-type(9) { display: block; }
-     > div:nth-of-type(14+n) { display: block; }
+     > div:nth-of-type(2) { display: none; }
+     > div:nth-of-type(3) { display: none; }
+     > div:nth-of-type(4) { display: none; }
+     > div:nth-of-type(5) { display: none; }
+     > div:nth-of-type(6) { display: none; }
+     > div:nth-of-type(7) { display: none; }
+     > div:nth-of-type(8) { display: none; }
+     > div:nth-of-type(10) { display: none; }
+     > div:nth-of-type(11) { display: none; }
+     > div:nth-of-type(12) { display: none; }
+     > div:nth-of-type(13) { display: none; }
 }
