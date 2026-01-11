@@ -56,7 +56,7 @@ div[tabindex="0"] > .MuiPaper-root > .MuiPaper-root {
   box-shadow: unset !important;
 }
 div[tabindex="0"] > .MuiPaper-root > .MuiPaper-root > div:nth-of-type(3) {
-  width: 100%;
+  width: calc(100% - 16px);
   height: calc(100% - 50px);
   padding: 0;
 }
