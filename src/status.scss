@@ -101,6 +101,7 @@ span.MuiBadge-root {
         position: absolute;
         display: block;
         overflow: visible;
+        color: var(--ex-param-color1);
         font-family: Kings;
         font-weight: 900 !important;
         font-style: italic;
@@ -114,7 +115,6 @@ span.MuiBadge-root {
         height: 50px !important;
         left: 170px !important;
         top: 85px !important;
-        color: var(--ex-param-color1);
         font-size: 72pt;
         text-align: right;
         border-radius: 0;
@@ -126,7 +126,6 @@ span.MuiBadge-root {
     > span::after {
         @extend %initiative-setting;
         content: "DEX";
-        color: var(--ex-param-color1);
         font-size: 24pt;
         width: 50px !important;
         height: 20px !important;
@@ -268,6 +267,7 @@ span.MuiBadge-root + div > div {
         left: 5px;
         top: 435px;
         > div:nth-of-type(1) {
+            > p:nth-of-type(1) { color: var(--ex-param-color2); }
             > p:nth-of-type(2) {
                 color: rgba(0,0,0,0);
                 text-shadow: none;

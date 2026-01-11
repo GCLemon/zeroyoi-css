@@ -82,6 +82,7 @@ span.MuiBadge-root > span::after, span.MuiBadge-root > span {
   position: absolute;
   display: block;
   overflow: visible;
+  color: var(--ex-param-color1);
   font-family: Kings;
   font-weight: 900 !important;
   font-style: italic;
@@ -92,7 +93,6 @@ span.MuiBadge-root > span {
   height: 50px !important;
   left: 170px !important;
   top: 85px !important;
-  color: var(--ex-param-color1);
   font-size: 72pt;
   text-align: right;
   border-radius: 0;
@@ -101,7 +101,6 @@ span.MuiBadge-root > span {
 }
 span.MuiBadge-root > span::after {
   content: "DEX";
-  color: var(--ex-param-color1);
   font-size: 24pt;
   width: 50px !important;
   height: 20px !important;
@@ -222,6 +221,9 @@ span.MuiBadge-root + div > div > div:nth-of-type(3) > div:nth-of-type(2) > div:n
 span.MuiBadge-root + div > div > div:nth-of-type(4) {
   left: 5px;
   top: 435px;
+}
+span.MuiBadge-root + div > div > div:nth-of-type(4) > div:nth-of-type(1) > p:nth-of-type(1) {
+  color: var(--ex-param-color2);
 }
 span.MuiBadge-root + div > div > div:nth-of-type(4) > div:nth-of-type(1) > p:nth-of-type(2) {
   color: rgba(0, 0, 0, 0);
