@@ -14,3 +14,126 @@
 @import url("https://yudukiak.github.io/ccfoliaCSS/CSS/asset/status.css");
 @import url("https://yudukiak.github.io/ccfoliaCSS/CSS/asset/timer.css");
 @import url("https://yudukiak.github.io/ccfoliaCSS/CSS/asset/volume.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Kings&family=Yuji+Mai&family=Yusei+Magic&display=swap');
+
+:root {
+    --balloon-width: 1080px;
+    --balloon-height: 270px;
+    --image-size: 240px;
+    --padding-vert: 8px;
+    --padding-horiz: 8px;
+    --background-image: linear-gradient(120deg, #001896, #0E172A);
+    --border-color: rgb(245, 245, 245);
+    --font-color: rgb(245, 245, 245);
+    --font-color-success: rgb(33, 150, 243);
+    --font-color-failure: rgb(245, 0, 87);
+    --font-size-text: 2.5rem;
+    --font-size-name: 2.0rem;
+}
+
+// 吹き出し
+div[tabindex="0"] > .MuiPaper-root {
+
+    // Paperの外側の設定
+    display: block;
+    left: 39px;
+    right: 39px;
+    bottom: 20px;
+    max-width: var(--balloon-width);
+    max-height: var(--balloon-height);
+    margin: 0px;
+    border: 4px solid var(--border-color);
+    background-image: var(--background-image);
+
+    // Paperの内側の設定
+    > .MuiPaper-root {
+        width: calc(var(--balloon-width) - var(--padding-horiz) * 2);
+        height: calc(var(--balloon-height) - var(--padding-vert) * 2);
+        padding: var(--padding-horiz) var(--padding-vert);
+        background: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    // アイコン画像
+    > img {
+        display: block;
+        position: absolute;
+        top: calc((var(--balloon-height) - var(--image-size)) / 2);
+        left: calc(var(--balloon-width) - var(--padding-horiz) - var(--image-size) - 70px);
+        width: var(--image-size);
+        height: var(--image-size);
+        object-fit: contain;
+        object-position: top;
+        opacity: 0.5;
+    }
+    > img[src=""] { display: none; }
+
+    // フォント共通設定
+    %font-setting {
+        color: var(--font-color);
+        font-family: Kings, "Yuji Mai";
+        font-weight: 400 !important;
+        font-style: normal !important;
+    }
+
+    // 名前
+    .MuiTypography-subtitle2 {
+        @extend %font-setting;
+        display: block;
+        font-size: var(--font-size-name);
+    }
+
+    // 本文
+    .MuiTypography-body1 {
+        @extend %font-setting;
+        font-size: var(--font-size-text);
+    }
+
+    // ダイス画像
+    > .MuiPaper-root > div:nth-child(1) {
+        --dice-size: 120px;
+        position: absolute;
+        left: var(--padding-horiz);
+        bottom: var(--padding-vert);
+        justify-content: flex-start;
+        margin: 0;
+
+        > img {
+            width: var(--dice-size);
+            height: var(--dice-size);
+            object-fit: contain;
+        }
+    }
+    
+    // ダイス結果
+    .MuiTypography-body2 {
+        @extend %font-setting;
+        display: block;
+        font-size: var(--font-size-name);
+    }
+    
+    // 成功
+    .MuiTypography-body2.css-1l6qhgm {
+        text-shadow:
+            0px 0px 2px var(--font-color-success),
+            0px 0px 4px var(--font-color-success),
+            0px 0px 8px var(--font-color-success),
+            0px 0px 8px var(--font-color-success);
+    }
+
+    // 失敗
+    .MuiTypography-body2.css-1j13mke {
+        text-shadow:
+            0px 0px 2px var(--font-color-failure),
+            0px 0px 4px var(--font-color-failure),
+            0px 0px 8px var(--font-color-failure),
+            0px 0px 8px var(--font-color-failure);
+    }
+}
+
+// ボタンは非表示に
+[aria-label="スキップ"] { display: none; }
+[aria-label="閉じる"] { display: none; }
