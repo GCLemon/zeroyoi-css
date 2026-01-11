@@ -28,9 +28,11 @@
   --font-color-failure: rgb(245, 0, 87);
   --font-size-text: 2.0rem;
   --font-size-name: 1.6rem;
+  --shadow-color: #FFEB8D;
 }
 
 div[tabindex="0"] > .MuiPaper-root {
+  filter: drop-shadow(8px 6px 0px var(--shadow-color));
   display: block;
   left: 39px;
   right: 39px;

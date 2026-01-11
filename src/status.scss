@@ -38,7 +38,7 @@
     --text-border: var(--z), var(--z), var(--z), var(--z), var(--z), var(--z);
 };
 
-/* 影をつける */
+// 影をつける
 #root > div > div {
     filter: drop-shadow(8px 6px 0px var(--shadow-color));
 }
