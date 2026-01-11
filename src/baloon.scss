@@ -16,7 +16,6 @@
 @import url("https://yudukiak.github.io/ccfoliaCSS/CSS/asset/volume.css");
 
 @import url('https://fonts.googleapis.com/css2?family=Kings&family=Yuji+Mai&family=Yusei+Magic&display=swap');
-
 :root {
     --balloon-width: 960px;
     --balloon-height: 270px;
@@ -50,6 +49,7 @@ div[tabindex="0"] > .MuiPaper-root {
     border: 4px solid var(--border-color);
     background-image: var(--background-image);
     overflow: visible;
+    box-shadow: unset !important; 
 
     // Paperの内側の設定
     > .MuiPaper-root {
@@ -60,6 +60,7 @@ div[tabindex="0"] > .MuiPaper-root {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        box-shadow: unset !important; 
 
         > div:nth-of-type(3) {
             width: 100%;
